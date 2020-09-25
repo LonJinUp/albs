@@ -43,6 +43,9 @@ html,body{
     width: 100%;
 
     height: 100%;
+    background-color: #015abc;
+    overflow: hidden;
+    position: relative;
    
 }
 .scroll-box{
@@ -60,11 +63,54 @@ html,body{
   display: none;
   visibility: hidden;
 }
+
+#page2{
+    // display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-color: #ef6574;
+    transition: all .8s;
+    opacity: 0;
+    
+
+    img{
+        width: 100%;
+        height: 13.34rem;
+    }
+
+    .content{
+        position: absolute;
+        top: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 100%;
+        height:100%;
+        overflow:hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        .cos{
+            width: 100%;
+            height: 20rem;
+        }
+    }
+    .content::-webkit-scrollbar {/*隐藏滚轮*/
+        display: none;
+        visibility: hidden;
+      }
+      
+}
 #index{
     width: 100%;
     height: 100%;
     overflow: hidden;
     background-color: #015abc;
+    position: relative;
+    transition: all .8s;
 
     .position{
         position: relative;
@@ -250,17 +296,19 @@ html,body{
             bottom: 0;
             width: 100%;
             height: 100%;
-            display: none;
+            // display: none;
             // background-color: red;
             overflow-x: hidden;
             overflow-y: scroll;
             width: 100%;
             height:100%;
-            overflow:hidden;
-            overflow-y: scroll;
+            
+           
+            display: none;
             -webkit-overflow-scrolling: touch;
         }
        
+
         
         .scroll-box2::-webkit-scrollbar {/*隐藏滚轮*/
           display: none;

@@ -71,11 +71,23 @@
     </section>
 
     <section id="page2">
-        <img src="images/750-1334.png" alt="">
+        <img src="images/750-1334.png" id='big' alt="">
         <div class="content">
-            <div class="cos"></div>
+            <div class="cos" id='two'></div>
         </div>
     </section>
+    <section id='page3'>
+        <img src="images/668-652.png" class="top-fixed" alt="">
+        <img src="images/750-583.png" class="bottom-fixed" alt="">
+
+        <img src="images/171-816.png" class="guan" style="z-index: 10;" alt="">
+        <img src="images/5712-8780.png" class="wei" alt="">
+        <div class="content" >
+            <div class="cos" id='three'></div>
+        </div>
+    </section>
+   
+
 </body>
 <script src="js/jquery.js"></script>
 <script src='js/iscroll.js'></script>
@@ -93,102 +105,85 @@
         }
     }
 
+    var  winTop=document.body.offsetHeight;
+    $("#two").css('height',winTop+30+'px')
+    $("#three").css('height',winTop+30+'px')
     function son() {
-        // console.log($('#index').scrollTop())
-
-
+       
         var topScroll = $('#index .scroll-box').scrollTop();
         var top = $(".content").height()
         var win = $(window).height()
+        console.log(winTop + topScroll )
+        console.log(top)
+        if (winTop + topScroll >= top-10) {
+           $(".people").addClass('fadeIn')
+           let firstPic=setTimeout(function(e){
+          
+            $("#index").css('opacity','0')
+            $("#page2").css('z-index', '1')
+            $("#page2").css('opacity','1')
 
 
-        if (win + topScroll >= top) {
-            $(".scroll-box2").show()
-            $(".scroll-box").css("position", 'fixed')
-            $(".scroll-box").css("bottom", '0px')
-        } else {
-            // $(".scroll-box2").hide()
-        }
+           clearTimeout(firstPic)
+           },1700)
+        } 
     }
 
+   
 
-    $('#index .scroll-box').scroll(throttle(son, 10));
-    var n = 1;
-    var x = 1;
-    var tops = 0;
-    function childs() {
-        var topScroll = $('#index .scroll-box2').scrollTop();
-        console.log(tops)
-        console.log(topScroll)
-        if (tops > 0) {
+    
 
-            if (tops < topScroll) {
-                console.log('加')
-                var num = n += 0.01;
-                var left = x += 0.2
-                let a = 'scale(' + num + ') translate(' + -left + 'px,0)'
+function page2(){
+    let topScroll = $('#page2 .content').scrollTop();
+    let top = $("#two").height()
+    let win = $(window).height()
 
-                if (num >= 2.6) {
-                    // $("#index").fadeOut(600);
-                    $("#index").animate({
-                        opacity: '0',
-                    });
-                      $("#page2").css('z-index', '1')
-                    $("#page2").css('opacity','1')
-                    
-                    // $("#page2").animate({
+    if (winTop + topScroll  >= top-10) {
+         $("#big").addClass("fadeIn2")
+         let pageTime=setTimeout(()=>{
+            pageTime=null;
+           $("#page2").css('z-index', '-1')
+            $("#page2").css('opacity','0')
+            $("#page3").css('z-index', '1')
+            $("#page3").css('opacity','1')
+         },1600)
+     } 
+}
 
-                    //     opacity: '1',
+function page3(){
+    let topScroll = $('#page3 .content').scrollTop();
+    let top = $("#three").height()
+    let win = $(window).height()
 
-                    // });
-                }
-                $("#people").css('transform', a)
-                tops = topScroll
+    if (winTop + topScroll  >= top-10) {
+       
 
-            } else {
-                console.log('jian')
+        //   $(".wei").css("transform",'scale(1)')
+        $(".wei").addClass("fadeIn3")
+        
+          setTimeout(()=>{
+            
+              $('.guan').addClass("fadeIn4")
+            
+          },300)
+        //  let pageTime=setTimeout(()=>{
+        //     pageTime=null;
+        //    $("#page2").css('z-index', '-1')
+        //     $("#page2").css('opacity','0')
+        //     $("#page3").css('z-index', '1')
+        //     $("#page3").css('opacity','1')
+        //  },1600)
+     } 
+}
 
-                if (topScroll > 3) {
-                    var num = n -= 0.01;
-                    var left = x -= 0.2;
+$('#index .scroll-box').scroll(throttle(son, 10));
 
+$("#page2 .content").scroll(throttle(page2,1000))
 
-                    let a = 'scale(' + num + ') translate(' + -left + 'px,0)'
-
-
-                    $("#people").css('transform', a)
-                } else {
-
-
-                    var num = 1
-                    var left = 0
-
-
-                    let a = 'scale(' + num + ') translate(' + -left + 'px,0)'
-                    $("#people").css('transform', a)
-
-                    $(".scroll-box2").hide()
-                }
+$("#page3 .content").scroll(throttle(page3,1000))
 
 
-
-                tops = topScroll
-
-
-            }
-
-        } else {
-            tops = topScroll
-        }
-
-
-
-
-
-
-    }
-
-    $("#index .scroll-box2").scroll(throttle(childs, 30))
+ 
 
 
 

@@ -23,6 +23,95 @@ html, body {
   visibility: hidden;
 }
 
+#page3 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-color: #015abc;
+  transition: all .8s;
+  opacity: 0;
+}
+
+#page3 .top-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 6.68rem;
+  height: 6.52rem;
+}
+
+#page3 .bottom-fixed {
+  width: 100%;
+  height: 5.83rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#page3 .content {
+  position: absolute;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 120%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+#page3 .guan {
+  width: 1.71rem;
+  height: 8.16rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 10;
+  transition: all .8s;
+}
+
+#page3 .wei {
+  width: 57.12rem;
+  height: 87.80rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: scale(1) translate(-22.4rem, -22.74rem);
+}
+
+#page3 .fadeIn3 {
+  animation: fadeIn3 1.6s ease 0.5s both;
+}
+
+@keyframes fadeIn3 {
+  from {
+    transform: scale(1) translate(-22.4rem, -22.74rem);
+  }
+  to {
+    transform: scale(1) translate(-30.4rem, -40.74rem);
+  }
+}
+
+#page3 .fadeIn4 {
+  animation: fadeIn4 2.2s cubic-bezier(0.61, 0.13, 0.5, 0.8) 0.1s both;
+}
+
+@keyframes fadeIn4 {
+  from {
+    transform: scale(1) translate(0, -5rem);
+  }
+  to {
+    transform: scale(1) translate(0, 0rem);
+  }
+}
+
 #page2 {
   width: 100%;
   height: 100%;
@@ -345,7 +434,6 @@ html, body {
   width: 100%;
   position: relative;
   z-index: 99;
-  transition: all .8s;
 }
 
 #index .people .people-1 {
@@ -372,5 +460,31 @@ html, body {
   /*隐藏滚轮*/
   display: none;
   visibility: hidden;
+}
+
+.fadeIn {
+  animation: fadeIn 1.8s ease 0.1s both;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(1) translate(0px, 0);
+  }
+  to {
+    transform: scale(2.6) translate(-18px, 0px);
+  }
+}
+
+.fadeIn2 {
+  animation: fadeIn2 1.6s ease 0.1s both;
+}
+
+@keyframes fadeIn2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(3);
+  }
 }
 /*# sourceMappingURL=index.css.map */

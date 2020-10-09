@@ -61,6 +61,7 @@ html, body {
   overflow: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  z-index: 99;
 }
 
 #page3 .guan {
@@ -75,6 +76,49 @@ html, body {
   transition: all .8s;
 }
 
+#page3 .tell {
+  width: 1.73rem;
+  height: 1.39rem;
+  position: fixed;
+  top: 0;
+  left: 1rem;
+  top: 2.6rem;
+  left: 3.6rem;
+  z-index: 15;
+  transition: all .8s;
+  opacity: 0;
+  display: block;
+  z-index: 100;
+}
+
+#page3 #content {
+  border-radius: .3rem;
+  background-color: white;
+  box-shadow: 0px 0.26rem 0.54rem 0px rgba(9, 44, 88, 0.38);
+  position: absolute;
+  width: 6.64rem;
+  bottom: .66rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: .46rem .3rem;
+  display: block;
+  opacity: 0;
+  z-index: 10;
+}
+
+#page3 #content p {
+  font-size: .24rem;
+  line-height: .4rem;
+  color: #014099;
+  letter-spacing: 1px;
+}
+
+#page3 #content .title {
+  font-weight: 400;
+}
+
 #page3 .wei {
   width: 57.12rem;
   height: 87.80rem;
@@ -83,7 +127,22 @@ html, body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  transform: scale(1) translate(-22.4rem, -22.74rem);
+  transform: scale(1) translate(-22.4rem, -5.74rem);
+}
+
+#page3 .bing {
+  width: 2.74rem;
+  height: 2.74rem;
+  position: fixed;
+  top: 6.88rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  z-index: 9;
+  opacity: 0;
+  display: block;
+  transition: all .8s;
 }
 
 #page3 .fadeIn3 {
@@ -92,10 +151,88 @@ html, body {
 
 @keyframes fadeIn3 {
   from {
-    transform: scale(1) translate(-22.4rem, -22.74rem);
+    transform: scale(1) translate(-22.4rem, -5.74rem);
   }
   to {
-    transform: scale(1) translate(-30.4rem, -40.74rem);
+    transform: scale(1) translate(-22.4rem, -10.74rem);
+  }
+}
+
+#page3 .fadeIn5 {
+  animation: fadeIn5 1.6s ease 0.5s both;
+}
+
+@keyframes fadeIn5 {
+  from {
+    transform: scale(1) translate(-22.4rem, -10.74rem);
+  }
+  to {
+    transform: scale(1) translate(-22.4rem, -15.74rem);
+  }
+}
+
+#page3 .fadeIn6 {
+  animation: fadeIn6 1.6s ease 0.5s both;
+}
+
+@keyframes fadeIn6 {
+  from {
+    transform: scale(1) translate(-22.4rem, -15.74rem);
+  }
+  to {
+    transform: scale(1) translate(-22.4rem, -20.74rem);
+  }
+}
+
+#page3 .fadeIn7 {
+  animation: fadeIn7 2s ease 0.2s both;
+}
+
+@keyframes fadeIn7 {
+  from {
+    transform: translate(-22.4rem, -20.74rem);
+  }
+  to {
+    transform: translate(-32.4rem, -42.74rem);
+  }
+}
+
+#page3 .fadeIn8 {
+  animation: fadeIn8 2s ease 0.2s both;
+}
+
+@keyframes fadeIn8 {
+  from {
+    transform: translate(-32.4rem, -42.74rem);
+  }
+  to {
+    transform: translate(-32.4rem, -48.74rem);
+  }
+}
+
+#page3 .fadeIn9 {
+  animation: fadeIn9 2s ease 0.2s both;
+}
+
+@keyframes fadeIn9 {
+  from {
+    transform: translate(-32.4rem, -48.74rem);
+  }
+  to {
+    transform: translate(-32.4rem, -54rem);
+  }
+}
+
+#page3 .fadeIn10 {
+  animation: fadeIn10 2s ease 0.2s both;
+}
+
+@keyframes fadeIn10 {
+  from {
+    transform: translate(-32.4rem, -48.74rem);
+  }
+  to {
+    transform: translate(-25.4rem, -57rem);
   }
 }
 

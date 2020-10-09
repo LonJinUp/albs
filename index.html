@@ -81,7 +81,17 @@
         <img src="images/750-583.png" class="bottom-fixed" alt="">
 
         <img src="images/171-816.png" class="guan" style="z-index: 10;" alt="">
+        <img src="images/173-139.png" alt="" class="tell">
+        
         <img src="images/5712-8780.png" class="wei" alt="">
+       
+        <img src="images/274-274.png" class="bing" alt="">
+
+        <div id="content">
+            
+           
+        </div>
+      
         <div class="content" >
             <div class="cos" id='three'></div>
         </div>
@@ -92,6 +102,7 @@
 <script src="js/jquery.js"></script>
 <script src='js/iscroll.js'></script>
 <script>
+window.onload=function(){
 
     function throttle(func, wait) {
         let timeout;
@@ -149,38 +160,289 @@ function page2(){
          },1600)
      } 
 }
-
+var page=1;
 function page3(){
     let topScroll = $('#page3 .content').scrollTop();
     let top = $("#three").height()
     let win = $(window).height()
 
     if (winTop + topScroll  >= top-10) {
-       
+        $('.tell').css('opacity','0')
+    $('.bing').css('opacity','0')
+    $("#content").css('opacity','0')
+    $('.guan').removeClass("fadeIn4")
 
-        //   $(".wei").css("transform",'scale(1)')
-        $(".wei").addClass("fadeIn3")
+          if(page==1){
+            $(".wei").addClass("fadeIn3")
+            let time1=setTimeout(()=>{
+                time=null
+                $('.guan').addClass("fadeIn4")
+            },300)
+            let time2=setTimeout(()=>{
+                time2=null
+                $('.tell').css('opacity','1')
+                $('.bing').css('opacity','1')
+            },2400)
+
+           let html=`<p class="title">${list[page-1].title}</p>
+                        <p class="tit-con">
+                            主要特征：<span>${list[page-1].titcon}</span>
+                        </p>
+                        <p class="tit-con">
+                            病因：<span>${list[page-1].titcon2}</span>
+                        </p>
+                        <p class="tit-con">
+                            治疗：<span>${list[page-1].titcon3}</span>
+                    </p>`;
+              $('#content').html(html)      
+            page++;
+            console.log(page)
+
+          }else if(page==2){
+            $(".wei").addClass("fadeIn5")
+            let time1=setTimeout(()=>{
+                time=null
+               
+                $('.guan').addClass("fadeIn4")
+                
+            },300)
+            let time2=setTimeout(()=>{
+                time2=null
+                $('.tell').css('opacity','1')
+                $('.bing').css('opacity','1')
+            },2400)
+            let html=`<p class="title">${list[page-1].title}</p>
+                        <p class="tit-con">
+                            主要特征：<span>${list[page-1].titcon}</span>
+                        </p>
+                        <p class="tit-con">
+                            病因：<span>${list[page-1].titcon2}</span>
+                        </p>
+                        <p class="tit-con">
+                            治疗：<span>${list[page-1].titcon3}</span>
+                    </p>`;
+
+
+              $('#content').html(html)     
+            
+            page++;
+            console.log(page)
+          }else if(page==3){
+            $(".wei").addClass("fadeIn6")
+            let time1=setTimeout(()=>{
+                time=null
+               
+                $('.guan').addClass("fadeIn4")
+                
+            },300)
+            let time2=setTimeout(()=>{
+                time2=null
+                $('.tell').css('opacity','1')
+                $('.bing').css('opacity','1')
+            },2400)
+            let html=`<p class="title">${list[page-1].title}</p>
+                        <p class="tit-con">
+                            主要特征：<span>${list[page-1].titcon}</span>
+                        </p>
+                        <p class="tit-con">
+                            病因：<span>${list[page-1].titcon2}</span>
+                        </p>
+                        <p class="tit-con">
+                            治疗：<span>${list[page-1].titcon3}</span>
+                    </p>`;
+
+
+              $('#content').html(html)     
+            
+            page++;
+          }else if(page==4){
+            $(".wei").addClass("fadeIn7")
+            let time1=setTimeout(()=>{
+                time=null
+               
+                $('.guan').addClass("fadeIn4")
+                
+            },300)
+            let time2=setTimeout(()=>{
+                time2=null
+                $('.tell').css('opacity','1')
+                $('.bing').css('opacity','1')
+            },2400)
+            let html=`<p class="title">${list[page-1].title}</p>
+                        <p class="tit-con">
+                            主要特征：<span>${list[page-1].titcon}</span>
+                        </p>
+                        <p class="tit-con">
+                            病因：<span>${list[page-1].titcon2}</span>
+                        </p>
+                        <p class="tit-con">
+                            治疗：<span>${list[page-1].titcon3}</span>
+                    </p>`;
+
+
+              $('#content').html(html)     
+            
+            page++;
+            console.log(page)
+
+          }
+          else if(page==5){
+            $(".wei").addClass("fadeIn8")
+            let time1=setTimeout(()=>{
+                time=null
+               
+                $('.guan').addClass("fadeIn4")
+                
+            },300)
+            let time2=setTimeout(()=>{
+                time2=null
+                $('.tell').css('opacity','1')
+                $('.bing').css('opacity','1')
+            },2400)
+            let html=`<p class="title">${list[page-1].title}</p>
+                        <p class="tit-con">
+                            主要特征：<span>${list[page-1].titcon}</span>
+                        </p>
+                        <p class="tit-con">
+                            病因：<span>${list[page-1].titcon2}</span>
+                        </p>
+                        <p class="tit-con">
+                            治疗：<span>${list[page-1].titcon3}</span>
+                    </p>`;
+
+
+              $('#content').html(html)     
+            
+            page++;
+            console.log(page)
+          }else if(page==6){
+            $(".wei").addClass("fadeIn9")
+            let time1=setTimeout(()=>{
+                time=null
+               
+                $('.guan').addClass("fadeIn4")
+                
+            },300)
+            let time2=setTimeout(()=>{
+                time2=null
+                $('.tell').css('opacity','1')
+                $('.bing').css('opacity','1')
+            },2400)
+            
+           
+            let html=`<p class="title">${list[page-1].title}</p>
+                        <p class="tit-con">
+                            主要特征：<span>${list[page-1].titcon}</span>
+                        </p>
+                        <p class="tit-con">
+                            病因：<span>${list[page-1].titcon2}</span>
+                        </p>
+                        <p class="tit-con">
+                            治疗：<span>${list[page-1].titcon3}</span>
+                    </p>`;
+
+
+              $('#content').html(html)     
+              page++;
+              console.log(page)
+          }
+          else if(page==7){
+            $(".wei").addClass("fadeIn10")
+            let time1=setTimeout(()=>{
+                time=null
+               
+                $('.guan').addClass("fadeIn4")
+                
+            },300)
+            let time2=setTimeout(()=>{
+                time2=null
+                $('.tell').css('opacity','1')
+                $('.bing').css('opacity','1')
+            },2400)
+            
         
-          setTimeout(()=>{
-            
-              $('.guan').addClass("fadeIn4")
-            
-          },300)
-        //  let pageTime=setTimeout(()=>{
-        //     pageTime=null;
-        //    $("#page2").css('z-index', '-1')
-        //     $("#page2").css('opacity','0')
-        //     $("#page3").css('z-index', '1')
-        //     $("#page3").css('opacity','1')
-        //  },1600)
+            let html=`<p class="title">${list[page-1].title}</p>
+                        <p class="tit-con">
+                            主要特征：<span>${list[page-1].titcon}</span>
+                        </p>
+                        <p class="tit-con">
+                            病因：<span>${list[page-1].titcon2}</span>
+                        </p>
+                        <p class="tit-con">
+                            治疗：<span>${list[page-1].titcon3}</span>
+                    </p>`;
+
+
+              $('#content').html(html)     
+              page++;
+          }
+          
+     
      } 
 }
+
+$(".tell").click(function(){
+  
+   
+   
+    $("#content").css('opacity','1')
+    $('#page3 .content').scrollTop('0')
+})
+
+
+
+var list=[
+    {
+        'title':'⻝道良性肿瘤',
+        'titcon':'可能会出现一些⻝道的堵塞感、有些人会有一些咽部的疼痛、恶心呕吐、并伴随⻝欲不振等表现',
+        'titcon2':'有很多，遗传因素、饮⻝不规律、或由于基因突变',
+        'titcon3':'早发现早进行手术治疗，术后通常也进行化疗'
+    },
+    {
+        'title':'⻝管癌',
+        'titcon':'进⻝异物感、间断吞⻝停滞或顿挫感、胸闷、或无明显症状',
+        'titcon2':'一般与⻓期⻝用腌制⻝物、⻓期喝酒抽烟，不良饮⻝习惯(如⻝用过烫、粗糙或 霉变⻝物、缺乏微量元素和维生素)相关，并有一定的遗传易感性',
+        'titcon3':'极早期患者在内镜治疗下就可获得良好效果; 早期患者通过外科手术可以达到根治目的; 中晚期患者以手术为主结合放化疗，可使一部分患者达到根治'
+    },
+    {
+        'title':'反流性⻝管炎 ',
+        'titcon':'胸⻣后烧灼感或疼痛、胃、⻝管反流、吞咽疼痛、咽下困难、反胃、出血及 贫血等',
+        'titcon2':'抗反流功能下降、⻝管清除能力降低、⻝管粘膜防御屏障作用减弱、 胃排空延迟等因素引起',
+        'titcon3':'需要注意饮⻝，少吃辛辣、生冷、过于油腻的⻝物，避免暴饮暴⻝。可 少⻝多餐，吃清淡容易消化的⻝物。饭后适当的活动，促进胃肠蠕动，如加重需进一步就 诊治疗'
+    },
+    {
+        'title':'慢性胃炎',
+        'titcon':'空腹时或夜间的胸部灼烧感、饭后恶心、早饱、腹胀等',
+        'titcon2':'、慢性萎缩性胃炎的发生与患者生活中的不良习惯有关，如酗酒、抽烟等，如果不对此 病进行治疗，极有可能会进一步发生肠化生、典型增生等，最终导致癌变',
+        'titcon3':'根除HP、促胃肠动力、药物治疗、进行饮⻝管理。'
+    },
+    {
+        'title':'幽⻔螺旋杆菌',
+        'titcon':'大多数患者在感染早期没有任何症状，部分可出现急性胃炎症状，包括上 腹痛、腹胀、恶心、呕吐、⻝欲减退等',
+        'titcon2':'其诱发因素与传播途径有关，包括与感染者⻓期密切接触、使用感染者用 过的不洁饮⻝器具、直接口对口喂⻝接触等变',
+        'titcon3':'60%的胃病因它所致，预防这种细菌需注意饮⻝卫生，例如认真洗手洗餐具、 采用分餐制，不要密切接触婴幼儿和儿童。另外常吃猴头菇、丁香、沙棘、砂仁、 大枣、银耳和莱菔子这几种杀菌⻝物'
+    },
+    {
+        'title':'胃癌',
+        'titcon':'胃癌早期也往往无症状或仅有上腹部不适的症状，与良性疾病相似，不易 引起重视，使大多数患者错过了诊治胃癌的最佳时机，待到胃癌向身体发出明确的 信号时已经到了疾病进展期或晚期。',
+        'titcon2':'⻓期吸烟喝酒、喜欢吃油炸、烟熏、腌制⻝品，高油高盐、 ⻝物过烫、饮⻝不规律、暴饮暴⻝都将对胃造成伤害，⻓此以往容易导致疾病',
+        'titcon3':'手术是早期患者根治的唯一可能方法，进展期患者需依据病理学类型以及临床分 析采用手术治疗为主，化疗、放疗、生物靶向治疗为辅的综合治疗手段'
+    },
+    {
+        'title':'十二指肠溃疡',
+        'titcon':'典型症状表现为反复发作的上腹痛，多为钝痛、胀痛、灼痛等，且多在空腹时发 作。也会伴随反酸、烧心、⻝欲减退、体重变化等、若患者因溃疡慢性失血，可出 现贫血相关症状',
+        'titcon2':'幽⻔螺旋杆菌感染、⻓期服用抗炎药、遗传因素、以及⻓期饮酒吸烟、精神紧张 等不良生活习惯诱发',
+        'titcon3':'饮⻝生活规律，避免辛辣生冷等刺激性⻝物、注意劳逸结合、以及药物治疗'
+    },
+  
+]
 
 $('#index .scroll-box').scroll(throttle(son, 10));
 
 $("#page2 .content").scroll(throttle(page2,1000))
 
 $("#page3 .content").scroll(throttle(page3,1000))
+}
 
 
  
